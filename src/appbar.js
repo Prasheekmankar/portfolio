@@ -1,5 +1,3 @@
-
-import './App.css';
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -13,19 +11,11 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Route, Switch, useHistory } from "react-router-dom";
 
-import Paper from '@mui/material/Paper';
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-
-import {Home} from './Home.js'
-
-// import ResponsiveAppBar from './appbar.js'
-// import { Navebar } from './navbar.js';
-function App() {
-  const history = useHistory();
+const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -45,7 +35,6 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Paper elevation={4} style={{minHeight:"100vh"}}>
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -88,32 +77,16 @@ function App() {
                 }}
               >
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"
-                  Onclick={()=> history.push('/')}
-                  >
-                    Projects2
-                    </Typography>
+                  <Typography textAlign="center">Projects</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"
-                  Onclick={()=> history.push('/')}
-                  >
-                    Projects
-                    </Typography>
+                  <Typography textAlign="center">Projects</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"
-                  Onclick={()=> history.push('/')}
-                  >
-                    Projects
-                    </Typography>
+                  <Typography textAlign="center">Projects</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"
-                  Onclick={()=> history.push('/')}
-                  >
-                    Projects
-                    </Typography>
+                  <Typography textAlign="center">Projects</Typography>
                 </MenuItem>
               </Menu>
             </Box>
@@ -127,21 +100,25 @@ function App() {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Button
+                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block", ml: "auto" }}
               >
-                Projects1
+                Projects
               </Button>
               <Button
+                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Projects
               </Button>
               <Button
+                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Projects
               </Button>
               <Button
+                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Projects
@@ -162,17 +139,7 @@ function App() {
           </Toolbar>
         </Container>
       </AppBar>
-      <Switch>
-      <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/home">
-          {/* <Home /> */}
-        </Route>
-      </Switch>
-      </Paper>
     </ThemeProvider>
   );
-}
-
-export default App;
+};
+export default ResponsiveAppBar;
