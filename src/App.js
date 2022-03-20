@@ -36,7 +36,7 @@ function App() {
     setAnchorElNav(null);
   };
 
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
   const theme = createTheme({
     palette: {
       mode: mode,
