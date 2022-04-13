@@ -9,7 +9,7 @@ export function Home() {
       <h1>My name is Prasheek Buddheshwar Mankar</h1>
       <h2>I am a Full-Stack Developer</h2>
       <Button
-        href=""
+        href="https://docs.google.com/document/d/1JsCGPnz0BkxXQO4w4iIVI4RFYXb0Z91AGdJTVyEbRBs/edit#"
         color="warning"
         variant="contained"
         target="_blank"
